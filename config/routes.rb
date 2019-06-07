@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
+    sessions: "users/sessions",
     registrations: 'users/registrations'
   }
-  root to: 'static_pages#index'
+  root "static_pages#index"
+  resources :static_pages, only: [:index, :show]
   resources :users, only: [:index, :show]
+  resources :relationships, only: [:create, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
