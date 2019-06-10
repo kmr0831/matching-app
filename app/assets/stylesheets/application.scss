@@ -16,8 +16,8 @@
  @import "bootstrap";
  
  @font-face{
-    font-famiry:"myfont";
-    src: font-url("/fonts/squealer-embossed.ttf") format("truetype");
+    font-famiry:'myfont';
+    src: url('squealer_embossed.ttf') format('truetype');
  }
  
  /* header */
@@ -25,7 +25,7 @@
     margin-bottom:8px;
     #logo{
       margin:0 auto;
-      font-family:"myfont";
+      font-family:'myfont';
     }
  }
  
@@ -37,10 +37,52 @@
     background-position: center;
     height:500px;
     width:100%;
+    p{
+        text-align:center;
+        color:#FF3F00;
+        font-size:50px;
+    }
  }
  
  .title{
      text-align:center;
+     margin-top:15px;
+     font-family:'myfont';
+ }
+ 
+ .link1{
+     text-align:center;
+     .signup{
+       display: inline-block;
+       border:solid 1px red;
+       margin-bottom:15px;
+       font-size:25px;
+       padding:8px 20px;
+     }
+ }
+ 
+ .link2{
+     text-align:center;
+     .login{
+        display: inline-block;
+        border:solid 1px red;
+        margin-bottom:20px;
+        font-size:25px;
+        padding:8px 20px;
+     }
+ }
+ 
+ .slide{
+     background-color:#E5E5E5;
+     border-top: 2px solid #6c5a3f;
+     border-bottom:2px solid #6c5a3f;
+     margin-bottom:20px;
+     text-align:center;
+     p{
+         color:#4a4a4a;
+         font-size:20px;
+         margin-top:30px;
+     }
  }
  
  .users{

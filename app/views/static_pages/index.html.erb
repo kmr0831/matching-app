@@ -4,6 +4,21 @@
 
 <p class="title">ヘビーメタル好き専用のマッチングサイト</p>
 
+<div class="link1">
+  <div class="signup">
+    <%= link_to "新規登録",new_user_registration_path %>
+  </div>
+</div>
+<div class="link2">
+  <div class="login">
+    <%= link_to "ログイン",new_user_session_path %>
+  </div>
+</div>
+
+<div class="slide">
+  <p>使い方</p>
+</div>
+
 <div class="users">
     <ul class="users_list">
     <% @users.each do |user| %>
@@ -15,5 +30,7 @@
     </ul>
     <%= paginate @users %>
 </div>
+
+
 
 
