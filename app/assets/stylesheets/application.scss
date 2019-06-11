@@ -72,17 +72,41 @@
      }
  }
  
+ .slide_title{
+     text-align:center;
+     color:#4a4a4a;
+     font-weight:bold;
+     border-top: 2px solid #6c5a3f;
+     padding:20px 0 0 0;
+     
+}
+ 
  .slide{
      background-color:#E5E5E5;
-     border-top: 2px solid #6c5a3f;
-     border-bottom:2px solid #6c5a3f;
      margin-bottom:20px;
      text-align:center;
-     p{
-         color:#4a4a4a;
-         font-size:20px;
-         margin-top:30px;
+     .slide_border{
+         width: 100px;
+         margin: 7px auto 12px;
+         border-bottom: 2px solid #6c5a3f;
      }
+ }
+ 
+ .bd-example{
+     .carousel-inner{
+         padding:180px 0;
+         border-bottom: 2px solid #6c5a3f;
+     }
+ }
+ 
+ .change_carousel_color{
+    color:#6c5a3f;
+ }
+ 
+ .all_users{
+     text-align:center;
+     font-size:23px;
+     font-weight:bold;
  }
  
  .users{
@@ -92,6 +116,14 @@
      }
  }
  
- 
+ .text{
+     text-align:center;
+     line-height:40px;
+     h4{
+         margin-top:40px;
+         margin-bottom:40px;
+         font-weight:bold;
+     }
+ }
  
  
