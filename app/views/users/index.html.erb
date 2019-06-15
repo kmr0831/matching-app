@@ -1,3 +1,29 @@
-<p>マッチング済み</p>
-<%= gravatar_for current_user %>
-<%= @users %>
+<p class="signup_users">登録しているユーザー</p>
+
+  <div class="users_list">
+    <ul class="users">
+    <% @users.each do |user| %>
+    <div class="users_information">
+      <li>
+        <%= user.name %>
+      </li>
+      <li>
+        <%= user.city %>
+      </li>
+      <li>
+        <%= user.favorite_singer %>
+      </li>
+      <li>
+        <%= link_to "プロフィールを見る", user_path(user) %>
+      </li>
+      <li>
+        <%= link_to "メッセージを送る" %>
+      </li>
+    </div>
+    <% end %>
+    </ul>
+  </div>
+  
+<div class="all_users">
+  <%= paginate @users %>
+</div>

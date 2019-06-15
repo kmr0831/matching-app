@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = current_user.matchers
+    @users = User.page(params[:page]).per(21)
   end
 
   def show

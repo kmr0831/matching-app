@@ -71,18 +71,34 @@
   </div>
 </div>
 
-<p class="all_users">登録しているユーザー</p>
+<p class="signup_users">登録しているユーザー</p>
 
-<div class="users">
-    <ul class="users_list">
+  <div class="users_list">
+    <ul class="users">
     <% @users.each do |user| %>
+    <div class="users_information">
       <li>
-        <%= gravatar_for user %>
         <%= user.name %>
       </li>
+      <li>
+        <%= user.city %>
+      </li>
+      <li>
+        <%= user.favorite_singer %>
+      </li>
+      <li>
+        <%= link_to "プロフィールを見る", user_path(user) %>
+      </li>
+      <li>
+        <%= link_to "メッセージを送る" %>
+      </li>
+    </div>
     <% end %>
     </ul>
-    <%= paginate @users %>
+  </div>
+
+<div class="all_users">
+  <%= link_to "もっと見る", users_path %>
 </div>
 
 <div class="text">

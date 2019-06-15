@@ -12,6 +12,21 @@
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
+  
+  <div class="field">
+    <%= f.label :city %><br/>
+    <%= f.text_field :city, autofocus: true, autocomplete: "city" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :favorite_singer %><br/>
+    <%= f.text_field :favorite_singer, autofocus: true, autocomplete: "favorite_singer" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :content %><br/>
+    <%= f.text_area :content, autofocus: true, autocomplete: "content" %>
+  </div>
 
   <div class="field">
     <%= f.label :password %>

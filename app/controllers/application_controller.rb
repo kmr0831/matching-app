@@ -8,8 +8,10 @@ class ApplicationController < ActionController::Base
   
   # ログイン後、users/indexに移動する
   def after_sign_in_path_for(resource)
-    static_pages_path(resource)
+    users_path(resource)
   end
+  
+  
 
   protected
   

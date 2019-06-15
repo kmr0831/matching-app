@@ -1,4 +1,9 @@
+<ul>
+    <li><%= @user.name%></li>
+    <li><%= @user.city%></li>
+    <li><%= @user.content%></li>
+</ul>
+
 <% if user_signed_in? %>
-  <%= gravatar_for current_user %>
   <%= render "follow_form" %>
 <% end %>
