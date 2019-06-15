@@ -4,6 +4,20 @@
       <% if user_signed_in? %>
         <%= link_to "マイページ", edit_user_registration_path, class: "nav-link" %>
         <%= link_to "ユーザー一覧", users_path %>
+        <div class="dropdown">
+            <button type="button" id="dropdown1"
+                class="btn btn-default dropdown-toggle"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false">
+              マッチングユーザー
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdown1">
+              <%= link_to "マッチング成立", matchers_user_path(current_user), class:"dropdown-item" %>
+              <%= link_to "いいね済", following_user_path(current_user), class:"dropdown-item" %>
+              <%= link_to "いいねされた", followers_user_path(current_user), class:"dropdown-item" %>
+            </div>
+        </div>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link" %>
       <% end %>
   </nav>

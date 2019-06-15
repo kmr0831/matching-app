@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  
+  #scope :matching, -> user_id { joins("INNER JOIN relationships ON relationships.follower_id = users.id
+  #INNER JOIN relationships AS r ON relationships.following_id = r.follower_id AND r.following_id = relationships.follower_id").where('relationships.following_id = ?', user_id) }
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          
@@ -26,6 +30,10 @@ class User < ApplicationRecord
   
   def following?(other_user)
     following.include?(other_user)
+  end
+  
+  def matchers
+    following & followers
   end
   
   

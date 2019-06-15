@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   }
   root "static_pages#index"
   resources :static_pages, only: [:index, :show]
-  resources :users, only: [:index, :show]
+  resources :users do
+    member do
+      get :following, :followers, :matchers
+    end
+  end
   resources :relationships, only: [:create, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

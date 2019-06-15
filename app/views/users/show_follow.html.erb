@@ -1,0 +1,6 @@
+<% @users.each do |user| %>
+  <ul>
+      <li><%= user.name %></li>
+      <li><%= link_to "プロフィールを見る", user_path(user) %></li>
+  </ul>
+<% end %>

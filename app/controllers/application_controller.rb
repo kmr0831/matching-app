@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
   
-  before_action :authenticate_user!, only: [:show,:edit,:update, :destroy]
+  before_action :authenticate_user!, only: [:show,:edit,:update, :destroy, :following, :followers, :matchers]
   
   # ログイン後、users/indexに移動する
   def after_sign_in_path_for(resource)
