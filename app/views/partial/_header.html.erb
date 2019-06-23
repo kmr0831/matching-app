@@ -6,11 +6,11 @@
         <%= link_to "ユーザー一覧", users_path, class: "nav-link" %>
         <div class="dropdown">
             <button type="button" id="dropdown1"
-                class="btn btn-default dropdown-toggle"
+                
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false">
-              <div class= "nav-link">マッチングユーザー</div>
+              <div class= "edit-dropdown">マッチングユーザー</div>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdown1">
               <%= link_to "マッチング成立", matchers_user_path(current_user), class:"dropdown-item" %>
