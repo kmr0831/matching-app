@@ -151,14 +151,16 @@
      }
  }
  
- /* registrations/new.html.erb */
+ /* registrations/new.html.erb, users/show.html.erb */
  .form-center{
      text-align:center;
  }
 
+/* users/show.html.erb */
 
-
-
+ul{
+    list-style:none;
+}
 
 
 
